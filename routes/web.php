@@ -11,11 +11,6 @@
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
 
-
-Route::get('/', function(){
-    return view('form');
-});
+Route::get('/welcome', 'PageController@welcome');
+Route::get('/', 'PageController@form');
