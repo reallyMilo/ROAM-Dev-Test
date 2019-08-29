@@ -28,6 +28,18 @@ class PageController extends Controller
 
     //store form data from form view
     public function store(){
-        return request()->all();
+
+        $entry = new Email();
+
+        $entry->name = request('name');
+        $entry->surname = request('surname');
+        $entry->email = request('email');
+
+        $entry->save();
+
+        //get all email entries
+        $directory = Email::all();
+
+        return view('form', ['directory' => $directory]);
     }
 }
