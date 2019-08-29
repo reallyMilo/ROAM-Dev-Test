@@ -2,15 +2,15 @@
 
 @section('content')
 
-    <h1>Email Address Directory</h1>
-
     <section class="form">
-    
-    <h1>Email Address Directory</h1>
 
-        <p>Fields marker with an * are required.</p>
+        <h1>Email Address Directory</h1>
+    
+        
 
         <form id="email-capture-form" method="POST" action="/">
+
+            <p>Fields marker with an * are required.</p>
 
             <!--POST TOKEN-->
             {{ csrf_field() }}

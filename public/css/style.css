@@ -1,0 +1,141 @@
+/* DEFAULT STYLES */
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+/* FORM STYLES */
+
+nav, section {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0px 25px;
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 20px 0px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul:after {
+    content: '';
+    max-width: 300px;
+    width: 100%;
+    height: 1px;
+    background: #CCC;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 20px;
+    font-weight: 600;
+}
+
+nav ul li a {
+    color: #636b6f;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+#email-capture-form label, #email-capture-form input {
+    display: block;
+    margin: 0px;
+}
+
+#email-capture-form input {
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px #CCC;
+    color: #636b6f;
+    outline: none;
+}
+
+#email-capture-form .form_left_column, #email-capture-form .form_right_column {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+#email-capture-form .form_left_column {
+    padding-right: 10px;
+}
+#email-capture-form .form_right_column {
+    padding-left: 10px;
+}
+
+#email-capture-form .form_single_column {
+    clear: both;
+    width: 100%;
+    padding-top: 20px;
+}
+#email-capture-form button {
+    margin-top: 30px;
+    cursor: pointer;
+    background: #636b6f;
+    color: #FFF;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    outline: none;
+}
+
+#email-capture-form button:hover {
+    background: #000;
+}
