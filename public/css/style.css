@@ -52,6 +52,8 @@ html, body {
 
 /* FORM STYLES */
 
+.clear { clear: both; }
+
 nav, section {
     max-width: 500px;
     margin: 0 auto;
@@ -146,9 +148,13 @@ nav ul li a:hover {
 
 .data_list .email_entry {
     width: 100%;
-    padding: 10px;
     display: flex;
     justify-content: flex-start;
+}
+
+.data_list .email_entry .entry_content {
+    display: flex;
+    width: 90%;
 }
 
 .data_list .email_entry:nth-child(odd) {
@@ -160,8 +166,10 @@ nav ul li a:hover {
 
 .data_list .email_entry span  {
     width: 25%;
-    padding-right: 10px;
+    margin-right: 10px;
+    padding: 10px 10px;
     box-sizing: border-box;
+    border-right: solid 1px #FFFFFF;
 }
 
 .data_list .email_entry .email {
@@ -170,7 +178,51 @@ nav ul li a:hover {
 
 .data_list .email_entry form {
     width: 10%;
+    padding: 10px 0px;
 }
 .data_list .email_entry form button {
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+
+    nav ul {
+        padding: 0px;
+    }
+
+    #email-capture-form .form_left_column, #email-capture-form .form_right_column {
+        width: 100%;
+    }
+
+    #email-capture-form .form_left_column {
+        padding-bottom: 10px;
+    }
+
+    #email-capture-form .form_right_column {
+        padding-left: 0px;
+    }
+
+    .data_list .email_entry, .data_list .email_entry .entry_content {
+        display: block;
+        word-break: break-word;
+    }
+
+    .data_list .email_entry .entry_content, .data_list .email_entry form {
+        float: left;
+    }
+
+    .data_list .email_entry span  {
+        width: 50%;
+        float: left;
+        display: block;
+        margin-right: 0px;
+    }
+
+    .data_list .email_entry .email {
+        clear: both;
+        width: 100%;
+        display: block;
+        border-top: solid 1px #FFFFFF;
+    }
+
 }
