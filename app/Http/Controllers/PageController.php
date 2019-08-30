@@ -19,7 +19,7 @@ class PageController extends Controller
     public function form(){
 
         //get all email entries
-        $directory = Email::all();
+        $directory = Email::all()->sortByDesc('created_at');
 
         //return view and pass it the directory
         return view('form', ['directory' => $directory]);
@@ -43,7 +43,7 @@ class PageController extends Controller
         $entry->save();
 
         //get all email entries
-        $directory = Email::all();
+        $directory = Email::all()->sortByDesc('created_at');
 
         return view('form', ['directory' => $directory]);
     }
@@ -63,7 +63,7 @@ class PageController extends Controller
         }
 
         //get all email entries
-        $directory = Email::all();
+        $directory = Email::all()->sortByDesc('created_at');
         return view('form', ['directory' => $directory]);
     }
 }
