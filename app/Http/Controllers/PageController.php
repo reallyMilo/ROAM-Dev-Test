@@ -31,6 +31,11 @@ class PageController extends Controller
 
         $entry = new Email();
 
+        request()->validate([
+            'name' => 'required',
+            'email' => ['required', 'email', 'unique:email_directory,email']
+        ]);
+
         $entry->name = request('name');
         $entry->surname = request('surname');
         $entry->email = request('email');

@@ -109,6 +109,11 @@ nav ul li a:hover {
     outline: none;
 }
 
+#email-capture-form .field_error {
+    border: solid 1px #99000f;
+    background-color: rgba(153, 0, 15, 0.1);
+}
+
 #email-capture-form .form_left_column, #email-capture-form .form_right_column {
     float: left;
     width: 50%;
@@ -140,6 +145,17 @@ nav ul li a:hover {
 
 #email-capture-form button:hover {
     background: #000;
+}
+
+.errors_container {
+    padding-top: 20px;
+}
+
+.errors_container p {
+    padding: 5px;
+    color: #FFFFFF;
+    background-color: #99000f;
+    margin-bottom: 5px;
 }
 
 .data_list {
