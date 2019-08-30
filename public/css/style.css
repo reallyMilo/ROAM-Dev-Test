@@ -139,3 +139,38 @@ nav ul li a:hover {
 #email-capture-form button:hover {
     background: #000;
 }
+
+.data_list {
+    margin: 40px auto;
+}
+
+.data_list .email_entry {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.data_list .email_entry:nth-child(odd) {
+    background-color: #EEE;
+}
+.data_list .email_entry:nth-child(even) {
+    background-color: #E1E1E1;
+}
+
+.data_list .email_entry span  {
+    width: 25%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.data_list .email_entry .email {
+    width: 40%;
+}
+
+.data_list .email_entry form {
+    width: 10%;
+}
+.data_list .email_entry form button {
+    cursor: pointer;
+}

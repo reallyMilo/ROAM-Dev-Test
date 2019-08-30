@@ -36,13 +36,18 @@
 
     <section class="data_list">
 
-        <ul>
             @foreach($directory as $entry)
 
-                <li>{{ $entry->name }}</li>
+                <div class="email_entry">
+                    <span class="name">{{ $entry->name }}</span><span class="surname">{{ $entry->surname }}</span><span class="email">{{ $entry->email }}</span>
+                    <form method="POST" action="/">
+                        <!--POST TOKEN-->
+                        {{ csrf_field() }}
+                        <button type="submit" class="delete_entry">Delete</button>
+                    </form>
+                </div>
 
             @endforeach
-        </ul>
 
     </section>
 
