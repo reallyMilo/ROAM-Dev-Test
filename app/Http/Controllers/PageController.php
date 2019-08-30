@@ -42,4 +42,23 @@ class PageController extends Controller
 
         return view('form', ['directory' => $directory]);
     }
+
+    //delete email directory entry
+    public function destroy(){
+
+        //id to be deleted
+        $id = request('entry_id');
+
+        //find the id
+        $found = Email::find($id);
+
+        //if the id exists delete it
+        if($found){
+            $found->delete();
+        }
+
+        //get all email entries
+        $directory = Email::all();
+        return view('form', ['directory' => $directory]);
+    }
 }

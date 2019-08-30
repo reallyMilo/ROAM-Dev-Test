@@ -34,24 +34,27 @@
 
     </section>
 
-    <section class="data_list">
+    <?php if(count($directory) != 0) { ?>
+        <section class="data_list">
+                @foreach($directory as $entry)
 
-            @foreach($directory as $entry)
-
-                <div class="email_entry">
-                    <div class="entry_content">
-                        <span class="name">{{ $entry->name }}</span><span class="surname">{{ $entry->surname }}</span><span class="email">{{ $entry->email }}</span>
+                    <div class="email_entry">
+                        <div class="entry_content">
+                            <span class="name">{{ $entry->name }}</span><span class="surname">{{ $entry->surname }}</span><span class="email">{{ $entry->email }}</span>
+                        </div>
+                        <form method="POST" action="/">
+                            <!--POST TOKEN-->
+                            {{ csrf_field() }}
+                            <!-- SET METHOD -->
+                            {{ method_field('DELETE') }}
+                            <input type="hidden" name="entry_id" value="{{ $entry->id }}">
+                            <button type="submit" class="delete_entry">Delete</button>
+                        </form>
+                        <div class="clear"></div>
                     </div>
-                    <form method="POST" action="/">
-                        <!--POST TOKEN-->
-                        {{ csrf_field() }}
-                        <button type="submit" class="delete_entry">Delete</button>
-                    </form>
-                    <div class="clear"></div>
-                </div>
 
-            @endforeach
-
-    </section>
+                @endforeach
+        </section>
+    <?php } ?>
 
 @endsection

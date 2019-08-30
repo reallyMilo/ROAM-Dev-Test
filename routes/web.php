@@ -15,3 +15,4 @@
 Route::get('/welcome', 'PageController@welcome');
 Route::get('/', 'PageController@form');
 Route::post('/', 'PageController@store');
+Route::delete('/', 'PageController@destroy');
