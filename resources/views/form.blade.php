@@ -17,7 +17,7 @@
 
             <div class="form_left_column">
                 <label for="name">Name*</label>
-                <input type="text" name="name" class="{{ $errors->has('name') ? 'field_error' : '' }}" value="{{ old('name') }}">
+                <input type="text" name="name" class="{{ $errors->has('name') ? 'field_error' : '' }}" value="{{ old('name') }}" required>
             </div>
             <div class="form_right_column">
                 <label for="surname">Surname</label>
@@ -25,7 +25,7 @@
             </div>
             <div class="form_single_column">
                 <label for="email">Email*</label>
-                <input type="text" name="email" class="{{ $errors->has('email') ? 'field_error' : '' }}" value="{{ old('email') }}">
+                <input type="text" name="email" class="{{ $errors->has('email') ? 'field_error' : '' }}" value="{{ old('email') }}" required>
             </div>
 
             @if($errors->any())
