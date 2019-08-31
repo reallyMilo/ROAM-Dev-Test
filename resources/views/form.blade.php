@@ -10,7 +10,7 @@
 
         <form id="email-capture-form" method="POST" action="/">
 
-            <p>Fields marker with an * are required.</p>
+            <p>Fields marked with an * are required.</p>
 
             <!--POST TOKEN-->
             {{ csrf_field() }}
