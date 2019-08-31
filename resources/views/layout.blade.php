@@ -24,6 +24,10 @@
     </nav>
     
     @yield('content')
+
+    <footer>
+        <a class="github" href="https://github.com/reallyMilo/ROAM-Dev-Test"></a>
+    </footer>
     
 </body>
 </html>

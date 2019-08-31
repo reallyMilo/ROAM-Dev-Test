@@ -32,7 +32,7 @@
                 <div class="errors_container">
                     @foreach($errors->all() as $error)
 
-                        <p class="error_message">!{{ $error }}</p>
+                        <p class="error_message">{{ $error }}</p>
 
                     @endforeach
                 </div>
@@ -58,7 +58,7 @@
                             <!-- SET METHOD -->
                             {{ method_field('DELETE') }}
                             <input type="hidden" name="entry_id" value="{{ $entry->id }}">
-                            <button type="submit" class="delete_entry">Delete</button>
+                            <button type="submit" class="delete_entry"></button>
                         </form>
                         <div class="clear"></div>
                     </div>
