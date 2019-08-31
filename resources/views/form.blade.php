@@ -44,7 +44,7 @@
 
     </section>
 
-    <?php if(count($directory) != 0) { ?>
+        @if(!$directory->isEmpty())
         <section class="data_list">
                 @foreach($directory as $entry)
 
@@ -65,8 +65,6 @@
 
                 @endforeach
         </section>
-
-        
-    <?php } ?>
+        @endif
 
 @endsection
