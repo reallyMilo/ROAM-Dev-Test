@@ -46,7 +46,7 @@
 
         @if(!$directory->isEmpty())
         <section class="data_list">
-                <div class="email_entry">
+                <div class="email_entry entry_titles">
                     <div class="entry_content">
                         <span class="name">Name</span><span class="surname">Surname</span><span class="email">Email</span>
                     </div>

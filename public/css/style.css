@@ -252,6 +252,10 @@ section {
         padding-left: 0px;
     }
 
+    .data_list .entry_titles {
+        display: none;  
+    }
+
     .data_list .email_entry .entry_content {
         display: block;
     }
