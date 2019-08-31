@@ -18,15 +18,15 @@
 
     <nav>
         <ul>
-            <li><a href="/welcome">Laravel Welcome Page</a></li>
-            <li><a href="/">Form</a></li>
+            <li class="{{ (request()->is('welcome')) ? 'active' : '' }}"><a href="/welcome">Laravel Welcome Page</a></li>
+            <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="/">Form</a></li>
         </ul>
     </nav>
     
     @yield('content')
 
     <footer>
-        <a class="github" href="https://github.com/reallyMilo/ROAM-Dev-Test"></a>
+        <a class="github" target="_blank" href="https://github.com/reallyMilo/ROAM-Dev-Test"></a>
     </footer>
     
 </body>
