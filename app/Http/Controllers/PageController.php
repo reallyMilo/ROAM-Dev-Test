@@ -27,7 +27,7 @@ class PageController extends Controller
     }
 
     //store form data from form view
-    public function store(Request $request, Email $email){
+    public function store(){
 
         $validated = request()->validate([
             'name' => 'required',
