@@ -27,20 +27,15 @@ class PageController extends Controller
     }
 
     //store form data from form view
-    public function store(){
+    public function store(Request $request, Email $email){
 
-        $entry = new Email();
-
-        request()->validate([
+        $validated = request()->validate([
             'name' => 'required',
+            'surname' => 'nullable',
             'email' => ['required', 'email', 'unique:email_directory,email']
         ]);
 
-        $entry->name = request('name');
-        $entry->surname = request('surname');
-        $entry->email = request('email');
-
-        $entry->save();
+        Email::create($validated);
 
         //get all email entries
         $directory = Email::all()->sortByDesc('created_at');

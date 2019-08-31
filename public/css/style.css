@@ -211,6 +211,7 @@ section {
 
 .data_list .email_entry .email {
     width: 50%;
+    border-left: solid 1px #FFFFFF;
 }
 
 .data_list .email_entry form {
@@ -271,6 +272,7 @@ section {
         width: 100%;
         display: block;
         border-top: solid 1px #FFFFFF;
+        border-left: none;
     }
 
 }

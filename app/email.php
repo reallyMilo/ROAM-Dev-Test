@@ -8,4 +8,8 @@ class Email extends Model
 {
     //
     public $table = 'email_directory';
+
+    protected $fillable = [
+        'name', 'surname', 'email'
+    ];
 }
