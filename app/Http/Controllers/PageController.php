@@ -30,9 +30,9 @@ class PageController extends Controller
     public function store(){
 
         $validated = request()->validate([
-            'name' => 'required',
-            'surname' => 'nullable',
-            'email' => ['required', 'email', 'unique:email_directory,email']
+            'name' => ['required', 'alpha', 'max:64'],
+            'surname' => ['nullable', 'alpha', 'max:64'],
+            'email' => ['required', 'email', 'unique:email_directory,email', 'max:256']
         ]);
 
         Email::create($validated);
