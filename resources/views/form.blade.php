@@ -21,7 +21,7 @@
             </div>
             <div class="form_right_column">
                 <label for="surname">Surname</label>
-                <input type="text" name="surname" value="{{ old('surname') }}" autocomplete="off">
+                <input type="text" name="surname" class="{{ $errors->has('surname') ? 'field_error' : '' }}" value="{{ old('surname') }}" autocomplete="off">
             </div>
             <div class="form_single_column">
                 <label for="email">Email*</label>
